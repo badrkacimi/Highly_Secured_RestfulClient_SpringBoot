@@ -29,7 +29,7 @@ import eai.bam.service.CompteClientService;
 @EnableJpaRepositories("eai.bam.repositories")
 @EntityScan("eai.bam.model.entities")
 @ComponentScan("eai.bam.service")
-public class SccbatchMain implements CommandLineRunner {
+public class RestClientMain implements CommandLineRunner {
 
 	
 	private BamFluxDTO bamFluxDTO;
