@@ -151,10 +151,10 @@ public class CompteClientService {
 					headers.add("recepteur", "001");
 					Date date = new Date();
 					//DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-					headers.add("dateArrete", fluxDTO.getH03());
+					headers.add("dateArrete", fluxDTO.getH03()
 					System.err.println("++++++++++++++++++++ "+ fluxDTO.getH03());
 					headers.add("login", "XXXXXX");
-					headers.add("password_hash", "4874e58678f5fd5RYYYad0943c011082906a3db86f278ce778390bd36193c78f");
+					headers.add("password_hash", "ikbkjewvbkJVFJfvkjFVvhjvjhsvh");
 		           HttpEntity<String> entity = new HttpEntity<>(headers);
 		           ResponseEntity<byte[]> response = rest.exchange(Constantes.CTR, HttpMethod.GET, entity, byte[].class);
 		           Files.write(Paths.get(file_name), response.getBody());
@@ -187,7 +187,7 @@ public class CompteClientService {
 			headers.add("recepteur", "XXX");
 			Date date = new Date();
 			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			// fluxDTO.getH04()   -- Le champ « dateDeclaration » dans le header doit contenir la date d’arrêté qui est dans h03 mais au format «yyyy-MM-dd HH:mm:ss»
+			// fluxDTO.getH04()   -- Le champ « dateDeclaration » dans le header doit contenir la date d’XXXXX qui est dans h03 mais au format «yyyy-MM-dd HH:mm:ss»
 			 Date date1=new SimpleDateFormat("yyyyMMdd").parse(fluxDTO.getH03());
 			headers.add("dateDeclaration", dateFormat.format(date1));
 			System.err.println(dateFormat.format(date1));
