@@ -39,13 +39,13 @@ public class RestClientMain implements CommandLineRunner {
 	
 	
 	public static void main(String[] args) {
-		SpringApplication.run(SccbatchMain.class, args).close();
+		SpringApplication.run(RestClientMain.class, args).close();
 	}
 	
 	@Override
 	public void run(String... arg0) throws Exception {
 		
-		Logger logger  = LoggerFactory.getLogger(SccbatchMain.class);
+		Logger logger  = LoggerFactory.getLogger(RestClientMain.class);
 		
 				logger.info("##############################################################################");
 				logger.info("#####################             DEBUT BATCH               ##################");
@@ -88,14 +88,14 @@ public class RestClientMain implements CommandLineRunner {
 				case 1 :
 				{
 					System.out.println("test 1");
-					clientService.downloadCTRFile(bamFluxDTO, 1,Constantes.file_CTR_old);
+					clientService.downloadFile(bamFluxDTO, 1,Constantes.file_CTR_old);
 					break;
 				}
 				case 2 :
 				{
 					System.out.println("test 2");
 					clientService.post(encodedData, bamFluxDTO, skeySpec);
-					clientService.downloadCTRFile(bamFluxDTO, 0, Constantes.file_CTR);
+					clientService.downloadFile(bamFluxDTO, 0, Constantes.file_CTR);
 					break;
 				}
 				default:
